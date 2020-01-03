@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Third Person Test"
-run/main_scene="res://Scenes/Game.tscn"
+run/main_scene="res://Game.tscn"
 config/icon="res://icon.png"
 
 [input]
@@ -53,4 +53,5 @@ right={
 
 [rendering]
 
+environment/default_clear_color=Color( 0.0692139, 0.0785599, 0.21875, 1 )
 environment/default_environment="res://default_env.tres"
