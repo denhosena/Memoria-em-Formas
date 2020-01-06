@@ -9,19 +9,37 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "KinematicBody",
-"class": "Player",
+"base": "Node2D",
+"class": "Card",
 "language": "GDScript",
-"path": "res://Player/Player.gd"
+"path": "res://Card/Card.gd"
+}, {
+"base": "Node2D",
+"class": "CardManager",
+"language": "GDScript",
+"path": "res://CardManager/CardManager.gd"
+}, {
+"base": "Node2D",
+"class": "GameManager",
+"language": "GDScript",
+"path": "res://GameManager/GameManager.gd"
+}, {
+"base": "Node2D",
+"class": "ShowCardSpriteLarge",
+"language": "GDScript",
+"path": "res://GameManager/ShowCardSpritesLarge.gd"
 } ]
 _global_script_class_icons={
-"Player": ""
+"Card": "",
+"CardManager": "",
+"GameManager": "",
+"ShowCardSpriteLarge": ""
 }
 
 [application]
 
-config/name="Third Person Test"
-run/main_scene="res://Game.tscn"
+config/name="Memoria em Formas"
+run/main_scene="res://Card/Game.tscn"
 config/icon="res://icon.png"
 
 [input]
@@ -53,5 +71,7 @@ right={
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
 environment/default_clear_color=Color( 0.0692139, 0.0785599, 0.21875, 1 )
 environment/default_environment="res://default_env.tres"
