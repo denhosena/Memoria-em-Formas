@@ -19,6 +19,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://CardManager/CardManager.gd"
 }, {
+"base": "Resource",
+"class": "Card_Data",
+"language": "GDScript",
+"path": "res://ScriptableObjects/ScriptableCard.gd"
+}, {
+"base": "Control",
+"class": "Card_to_book_sample",
+"language": "GDScript",
+"path": "res://ScriptableObjects/CardSample.gd"
+}, {
 "base": "Node2D",
 "class": "GameManager",
 "language": "GDScript",
@@ -32,6 +42,8 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "Card": "",
 "CardManager": "",
+"Card_Data": "",
+"Card_to_book_sample": "",
 "GameManager": "",
 "ShowCardSpriteLarge": ""
 }
@@ -39,8 +51,17 @@ _global_script_class_icons={
 [application]
 
 config/name="Memoria em Formas"
-run/main_scene="res://Card/Game.tscn"
+run/main_scene="res://Book/BookPage1.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1600
+window/size/height=900
+window/size/test_width=800
+window/size/test_height=450
+window/stretch/mode="2d"
+window/stretch/aspect="expand"
 
 [input]
 

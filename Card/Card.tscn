@@ -21,6 +21,7 @@ tracks/0/keys = {
 }
 
 [node name="Card" type="Node2D"]
+editor/display_folded = true
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 1 )
 spriteBackCard = ExtResource( 2 )

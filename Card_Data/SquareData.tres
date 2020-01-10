@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/square.png" type="Texture" id=1]
+[ext_resource path="res://ScriptableObjects/ScriptableCard.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+profile_image = ExtResource( 1 )
+card_name = "Quadrado"
+card_description = "O quadrado é um polígono convexo que possui quatro lados. Em outras palavras, é uma figura geométrica plana que possui quatro lados congruentes e quatro ângulos retos. Dessa maneira, é chamado também de quadrilátero. Os quadrados pertencem a um universo de figuras geométricas conhecido como paralelogramos. Nesse universo também se encontram os losangos e os retângulos, que, respectivamente, são definidos como quadrilátero com lados congruentes e quadrilátero com ângulos retos. Dessa maneira, todo quadrado também é um retângulo, pois todo quadrado possui os ângulos internos retos, e também é um losango, pois possui os quatro lados congruentes."

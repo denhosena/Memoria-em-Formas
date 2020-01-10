@@ -5,6 +5,7 @@
 [ext_resource path="res://GameManager/ShowCardSpritesLarge.tscn" type="PackedScene" id=3]
 
 [node name="Game" type="Node2D"]
+editor/display_folded = true
 
 [node name="CardManager" parent="." instance=ExtResource( 1 )]
 editor/display_folded = true
@@ -12,6 +13,6 @@ editor/display_folded = true
 [node name="GameManager" parent="." instance=ExtResource( 2 )]
 
 [node name="ShowCardSpritesLarge" parent="." instance=ExtResource( 3 )]
-position = Vector2( 327.004, 302.391 )
+position = Vector2( 361.54, 302.391 )
 
 [editable path="CardManager"]
