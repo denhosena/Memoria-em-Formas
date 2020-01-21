@@ -28,11 +28,6 @@ func SetFrontCard(sprite : Texture, i : int):
 	id = i
 
 
-func _on_Button_pressed():
-	if (canflip):
-		Flip_Card()
-
-
 func Flip_Card():
 	if (canflip and gameManager.canFlipCards):
 		gameManager.Add_Cards_To_Compare(self)
@@ -56,3 +51,8 @@ func Unflip_Card():
 func Destroy_Card():
 	gameManager.Remove_From_Cards_To_Compare(self)
 	queue_free()
+
+
+func _on_TextureButton_pressed():
+	if (canflip):
+		Flip_Card()

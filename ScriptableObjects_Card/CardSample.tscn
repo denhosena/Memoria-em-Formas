@@ -1,8 +1,9 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://ScriptableObjects/CardSample.gd" type="Script" id=1]
+[ext_resource path="res://ScriptableObjects_Card/CardSample.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Card to Book Sprites/circulo.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/DAYROM__.ttf" type="DynamicFontData" id=3]
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 50

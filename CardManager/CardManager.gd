@@ -4,7 +4,7 @@ class_name CardManager
 
 export(Array, Texture) var cardsSprites
 
-onready var card = load("res://Card/Card.tscn")
+onready var card = preload("res://Card_game/Card.tscn")
 
 var positions = []
 var randomNumbers = []

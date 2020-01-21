@@ -30,5 +30,4 @@ func Auto_scroll(delta):
 
 func _on_CheckBox_toggled(button_pressed):
 	auto_scroll = button_pressed
-	print("teste do script automatico da git")
 	pass # Replace with function body.
