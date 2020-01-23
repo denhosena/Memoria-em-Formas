@@ -1,19 +1,21 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://CardManager/CardManager.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/bear.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/cat.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/cow.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/dog.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/dragon.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/monkey.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/pig.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/rabbit.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/rat.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Formas/circulo.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Formas/decagono.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Formas/heptagono.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Formas/hexagono.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Formas/losango.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Formas/octogono.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Formas/paralelogramo.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Formas/pentagono.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Formas/quadrado.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Formas/retangulo.png" type="Texture" id=11]
 
 [node name="CardManager" type="Node2D"]
+editor/display_folded = true
 script = ExtResource( 1 )
-cardsSprites = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ]
+cardsSprites = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ]
 
 [node name="Position2D" type="Position2D" parent="."]
 position = Vector2( 100, 200 )

@@ -28,12 +28,12 @@ func _process(delta):
 	if maxNumberOfMatchs <= 0:
 		get_tree().reload_current_scene()
 
-func Add_Cards_To_Compare(card : Card):
+func Add_Cards_To_Compare(card):
 	if cardsFlipped < maxNumberOfCardsFlipped:
 		cardsToCompare.append(card)
 
 
-func Remove_From_Cards_To_Compare(card : Card):
+func Remove_From_Cards_To_Compare(card):
 	if cardsToCompare.size() != 0:
 		cardsToCompare.erase(card)
 
