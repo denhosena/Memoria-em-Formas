@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Menus/GameMenu.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/background.png" type="Texture" id=2]
+[ext_resource path="res://Menus/GameModes.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Fonts/highsquare.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Menus/Easy_LevelSelect.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Menus/Hard_LevelSelect.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Menus/Medium_LevelSelect.tscn" type="PackedScene" id=7]
+
+[node name="GameMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+
+[node name="GameModes" parent="." instance=ExtResource( 3 )]
+
+[node name="Label" parent="GameModes" index="0"]
+margin_top = 96.0
+
+[node name="Back_To_Main_Menu" type="Button" parent="GameModes"]
+margin_right = 210.0
+margin_bottom = 115.0
+custom_fonts/font = ExtResource( 4 )
+text = "VOLTAR"
+
+[node name="Easy_LevelSelect" parent="." instance=ExtResource( 5 )]
+editor/display_folded = true
+visible = false
+
+[node name="Hard_LevelSelect" parent="." instance=ExtResource( 6 )]
+editor/display_folded = true
+visible = false
+
+[node name="VBoxContainer" parent="Hard_LevelSelect" index="1"]
+editor/display_folded = true
+
+[node name="Medium_LevelSelect" parent="." instance=ExtResource( 7 )]
+editor/display_folded = true
+visible = false
+[connection signal="pressed" from="GameModes/VBoxContainer/easy_Button" to="." method="_on_easy_Button_pressed"]
+[connection signal="pressed" from="GameModes/VBoxContainer/medium_Button" to="." method="_on_medium_Button_pressed"]
+[connection signal="pressed" from="GameModes/VBoxContainer/hard_Button" to="." method="_on_hard_Button_pressed"]
+[connection signal="pressed" from="GameModes/Back_To_Main_Menu" to="." method="_on_Back_To_Main_Menu_pressed"]
+[connection signal="pressed" from="Easy_LevelSelect/Back_Button" to="." method="_on_Back_Button_pressed"]
+[connection signal="pressed" from="Hard_LevelSelect/Back_Button" to="." method="_on_Back_Button_pressed"]
+[connection signal="pressed" from="Medium_LevelSelect/Back_Button" to="." method="_on_Back_Button_pressed"]
+
+[editable path="GameModes"]
+
+[editable path="Easy_LevelSelect"]
+
+[editable path="Hard_LevelSelect"]
+
+[editable path="Medium_LevelSelect"]

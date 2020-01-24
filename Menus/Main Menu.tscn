@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Menus/Main Menu.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/DAYROM__.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 2 )
+
+[node name="Main Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+margin_bottom = 270.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Memoria em Formas"
+align = 1
+valign = 1
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -100.0
+margin_top = 340.0
+margin_right = 100.0
+custom_constants/vseparation = 50
+
+[node name="Play_Button" type="Button" parent="GridContainer"]
+margin_right = 200.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 100 )
+custom_fonts/font = SubResource( 2 )
+text = "JOGAR"
+
+[node name="Book_Button" type="Button" parent="GridContainer"]
+margin_top = 150.0
+margin_right = 200.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 200, 100 )
+custom_fonts/font = SubResource( 2 )
+text = "LIVRO"
+
+[node name="Social_Button" type="Button" parent="GridContainer"]
+margin_top = 300.0
+margin_right = 200.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 200, 100 )
+custom_fonts/font = SubResource( 2 )
+text = "INSTA"
+[connection signal="pressed" from="GridContainer/Play_Button" to="." method="_on_Play_Button_pressed"]
+[connection signal="pressed" from="GridContainer/Book_Button" to="." method="_on_Book_Button_pressed"]
+[connection signal="pressed" from="GridContainer/Social_Button" to="." method="_on_Social_Button_pressed"]

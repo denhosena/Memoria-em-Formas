@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Book/Book.gd" type="Script" id=1]
 [ext_resource path="res://Book/BookPage1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Book/BookPage2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Fonts/highsquare.tres" type="DynamicFont" id=4]
 
 [node name="MainBook" type="Control"]
 anchor_right = 1.0
@@ -11,7 +12,6 @@ script = ExtResource( 1 )
 scenes = [ ExtResource( 2 ), ExtResource( 3 ) ]
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 
@@ -50,5 +50,12 @@ margin_top = 363.0
 margin_right = 150.0
 margin_bottom = 513.0
 rect_min_size = Vector2( 150, 150 )
+
+[node name="back_to_main_menu" type="Button" parent="."]
+margin_right = 210.0
+margin_bottom = 115.0
+custom_fonts/font = ExtResource( 4 )
+text = "VOLTAR"
 [connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/LeftButton" to="." method="_on_LeftButton_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer2/RightButton" to="." method="_on_RightButton_pressed"]
+[connection signal="pressed" from="back_to_main_menu" to="." method="_on_back_to_main_menu_pressed"]

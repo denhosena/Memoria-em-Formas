@@ -1,5 +1,7 @@
 extends Control
 
+onready var main_menu_scene = "res://Menus/Main Menu.tscn"
+
 export(Array, PackedScene) onready var scenes
 
 var loaded_pages = []
@@ -38,3 +40,6 @@ func create_pages():
 		if (id > 1):
 			page.hide()
 	pass
+
+func _on_back_to_main_menu_pressed() -> void:
+	Global.goto_scene(main_menu_scene)

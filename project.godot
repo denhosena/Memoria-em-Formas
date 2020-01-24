@@ -51,8 +51,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Memoria em Formas"
-run/main_scene="res://Book/MainBook.tscn"
+run/main_scene="res://Menus/Main Menu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://Global.gd"
 
 [display]
 
